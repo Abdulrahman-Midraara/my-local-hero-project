@@ -10,6 +10,7 @@ import Register from "./pages/Register";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import { checkAuthStatus } from "./store/slices/authSlice";
 import HeroDetail from "./pages/HeroDetail";
+import AboutUs from "./pages/AboutUs";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -52,6 +53,7 @@ const App = () => {
             } 
           />
           <Route path="/heroes/:id" element={<HeroDetail />} />
+          <Route path="/about" element={<AboutUs />} />
         </Routes>
         <Footer />
       </div>

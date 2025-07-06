@@ -4,6 +4,7 @@ import {
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -24,7 +25,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Quick Links */}
+        {/* ✅ Quick Links with About Us */}
         <div>
           <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
           <ul className="text-gray-400 space-y-2 text-sm">
@@ -33,6 +34,14 @@ const Footer = () => {
             <li>How it Works</li>
             <li>Success Stories</li>
             <li>Community Guidelines</li>
+            <li>
+              <Link 
+                to="/about"
+                className="hover:text-orange-500 transition"
+              >
+                About Us
+              </Link>
+            </li>
           </ul>
         </div>
 
