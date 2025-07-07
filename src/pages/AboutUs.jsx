@@ -11,13 +11,13 @@ const AboutUs = () => {
     },
     {
       name: "Abdulrahman Ali",
-      email: "abdul@example.com",
+      email: "sabrihse1@hotmail.com",
       role: "Backend & DevOps",
       img: "/public/Abdulrahman Ali - Image.jpg"
     },
     {
       name: "Abdifatah Omar",
-      email: "abdifatah@example.com",
+      email: "abdfatahumer@gmail.com",
       role: "API Integration",
       img: "/public/default-user.jpg"
     },

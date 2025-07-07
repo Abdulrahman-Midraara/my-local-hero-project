@@ -59,6 +59,8 @@ const NominateHeroCard = ({ formData, updateFormData, nextStep }) => {
           <option value="">Select an impact area</option>
           <option value="Youth Development">Youth Development</option>
           <option value="Community Service">Community Service</option>
+            <option value="Education">Education</option>
+            <option value="Health">Health</option>
         </select>
         {errors.impactArea && (
           <p className="text-red-500 text-sm">{errors.impactArea.message}</p>

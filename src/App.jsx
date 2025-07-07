@@ -11,12 +11,13 @@ import ProtectedRoute from "./components/auth/ProtectedRoute";
 import { checkAuthStatus } from "./store/slices/authSlice";
 import HeroDetail from "./pages/HeroDetail";
 import AboutUs from "./pages/AboutUs";
+import Dashboard from "./pages/Dashboard";
 
 const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     if (token) {
       dispatch(checkAuthStatus());
     }
@@ -44,14 +45,23 @@ const App = () => {
               </ProtectedRoute>
             }
           />
-          <Route 
-            path="/nominate" 
+          <Route
+            path="/nominate"
             element={
               <ProtectedRoute requireAuth={true}>
                 <NominatePage />
               </ProtectedRoute>
-            } 
+            }
           />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute requireAuth={true}>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+
           <Route path="/heroes/:id" element={<HeroDetail />} />
           <Route path="/about" element={<AboutUs />} />
         </Routes>
